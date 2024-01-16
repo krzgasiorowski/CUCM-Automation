@@ -22,8 +22,7 @@ else:
     sys.exit()
 sshsession = paramiko.SSHClient()
 sshsession.set_missing_host_key_policy(paramiko.AutoAddPolicy())     
-with open(UCLIST_FILE) as file:
-   
+with open(UCLIST_FILE) as file:   
   for item in file:
    CUCM_ADDRESS = item.strip("\n") 
    print(CUCM_ADDRESS," <-connecting")
